@@ -1,0 +1,132 @@
+*{
+    margin: 10px;
+    padding: 10px;
+    /* para que las cajas no se desborden */
+    box-sizing: border-box;
+
+}
+body{
+    font-family: 'Bellota', cursive;
+}
+
+.padre{
+    /* uno al lado del otro */
+    display: flex;
+    /* para que todo se adapte segun su tamaño establecido */
+    flex-flow: column nowrap;
+}
+
+.header{
+    /* retroceder un nivel */
+    background: url(../img/fondo.jpg);
+    /* centrar fondo */
+    background-position:center ;
+    background-attachment: contain;
+    background-size: cover;
+    height: 1000px;
+    /* uno al lado del otro */
+    display: flex;
+    /* para que todo se adapte segun su tamaño establecido */
+    flex-flow: column nowrap;
+}
+    .menu{
+    background: #172426;
+    display: flex;
+    /* en columnas */
+    flex-flow: row;
+    /* Todo en una misma linea */
+    flex-flow: nowrap;
+    height: 100px;
+    align-items: center;
+    }
+        .logo{
+            background: #31402F;
+            flex: 1 1 auto;
+            height: 30px;
+        }
+
+        .nav{
+            background: #31402F;
+            flex: 5 1 auto;
+            height: 30px;
+        }
+        .social{
+            background: #73715F;
+            flex: 1 1 auto;
+            height: 30px;
+
+        }
+    .texto-principal{
+        background: #BFAE9F; 
+    }
+    h1{
+        background: #A68F81;
+    }
+.section{
+    background: #000;
+    /* uno al lado del otro */
+    display: flex;
+}
+    .articulos{
+        background: #172426;
+        flex: 1 1 auto;
+        display: flex;
+        /* Si el contenedor no alcanza, sigue en la siguiente fila */
+        flex-flow: row wrap;
+    }
+        .article{
+        background:#31402F;
+        flex: 1 1 40%;
+        }
+        .navegacion{
+        background: #73715F;
+        flex: 1 1 100%;
+        }
+    .aside{
+        background: #BFAE9F;
+        flex: 1 1 auto;
+    }
+            .publicidad{
+            background: #73715F;
+            }
+.footer{
+    background: #000;
+    display: flex;
+    justify-content: center;
+}
+    .pie{
+        background: #A68F81;
+        width: 300px;
+    }
+
+
+@media all and (max-width: 800px){
+    .section{
+        /* pasa el section en columnas */
+        flex-direction: column;
+    }
+    .menu{
+        /* pasa el section en columnas */
+        flex-direction: column;
+        height: auto;
+    }
+    .aside{
+        display: flex;
+        /* centrar horizontalmente */
+        justify-content: center;
+    }
+}
+
+@media all and (max-width: 600px){
+    .articulos{
+        /* pasa el section en columnas */
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 400px){
+    .aside{
+        /* pasa el section en columnas */
+        flex-direction: column;
+    }
+}
