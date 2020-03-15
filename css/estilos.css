@@ -1,82 +1,146 @@
 *{
-    margin: 10px;
-    padding: 10px;
+    margin: 0px;
+    padding: 0px;
     /* para que las cajas no se desborden */
     box-sizing: border-box;
-
 }
 body{
     font-family: 'Bellota', cursive;
 }
 
+a{
+    text-decoration: none;
+}
 .padre{
     /* uno al lado del otro */
     display: flex;
     /* para que todo se adapte segun su tamaño establecido */
     flex-flow: column nowrap;
 }
-
+.margen-interno{
+    padding: 0 50px;
+}
 .header{
     /* retroceder un nivel */
     background: url(../img/fondo.jpg);
     /* centrar fondo */
-    background-position:center ;
+    background-position:center;
     background-attachment: contain;
     background-size: cover;
-    height: 1000px;
     /* uno al lado del otro */
     display: flex;
     /* para que todo se adapte segun su tamaño establecido */
     flex-flow: column nowrap;
 }
     .menu{
-    background: #172426;
+    background: rgba(0,0,0,.4);
     display: flex;
     /* en columnas */
     flex-flow: row;
     /* Todo en una misma linea */
     flex-flow: nowrap;
-    height: 100px;
+    height: 60px;
     align-items: center;
+    border-bottom: 1px solid rgb(248, 247, 247);
     }
         .logo{
-            background: #31402F;
             flex: 1 1 auto;
-            height: 30px;
-        }
-
+        }   
+            .logo a{
+                color: #fff;
+                font-size: 30px;
+            }
+            .logo a:hover{
+                color:#0597F2;
+            }
         .nav{
-            background: #31402F;
             flex: 5 1 auto;
-            height: 30px;
-        }
+        }   
+            .nav a{
+                color: #fff;
+                font-size: 11px;
+                /* letras mayusculas */
+                text-transform:uppercase;
+                /* 0 arriba y abajo, 10 a derecha izquiera */
+                padding: 0 10px;
+                /* separar la letra entre ellas */
+                letter-spacing: 2px;
+            }
+            .nav a:hover{
+                color:#0597F2;
+            }
         .social{
-            background: #73715F;
-            flex: 1 1 auto;
-            height: 30px;
-
+            flex: 1 1 auto; 
+            display: flex;
         }
+            .social a{
+                font-size: 18px;
+                color: #fff;
+                padding:0 5px;
+            }
+            .social a:hover{
+                color:#0597F2;
+            }
     .texto-principal{
-        background: #BFAE9F; 
+        /* background: #BFAE9F;  */
+        height: 500px;
+        display: flex;
+        align-items: center;
     }
     h1{
-        background: #A68F81;
+/*         background: #A68F81;
+ */        color: #fff;
+        font-weight: 300;
+        text-align: center;
+        line-height: 1.6;
     }
 .section{
-    background: #000;
+    background: #f7f7f7;
     /* uno al lado del otro */
     display: flex;
 }
     .articulos{
-        background: #172426;
+        background: #f7f7f7;
         flex: 1 1 auto;
         display: flex;
         /* Si el contenedor no alcanza, sigue en la siguiente fila */
         flex-flow: row wrap;
     }
         .article{
-        background:#31402F;
-        flex: 1 1 40%;
+            flex: 1 1 40%;
+            color: #444;
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin: 10px 10px 0 0px;    
+            /* para que este a la mitad y comparta el espacio con el articulo del lado y asi se vea uno al lado del otro */
+            flex: 1 1 45%;
+            background: #010440;
+
+        }
+            .article img{
+                width: 100%;
+            }
+            .article a{
+                color: #fff;
+                font-size: 13px;
+                padding: 10px;
+                background: #000;
+                margin: 10px 0;
+                /* Pasar de modo bloque a modo linea */
+                display: inline-block;
+            }
+        h3{
+            color:#fff;
+            font-size: 13px;
+            padding: 10px 0;
+            margin-top: -80px;
+        } 
+        h2{
+            font-size: 25px;
+            /* siempre mayus */
+            text-transform: uppercase;
+            padding: 0px 0 10px 0;
+            color:#fff;
         }
         .navegacion{
         background: #73715F;
@@ -84,11 +148,20 @@ body{
         }
     .aside{
         background: #BFAE9F;
-        flex: 1 1 auto;
+        flex: 1 1 100%;
+    }   
+    .aside img{
+         width: 100%;
     }
-            .publicidad{
+    h4{
+        background: #000;
+        color: #fff;
+        padding: 10px;
+        text-transform: uppercase;
+    }
+        .publicidad{
             background: #73715F;
-            }
+        }
 .footer{
     background: #000;
     display: flex;
